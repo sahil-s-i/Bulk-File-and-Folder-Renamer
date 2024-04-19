@@ -1,6 +1,7 @@
 const fs = require('fs');
 const replaceThis = "demo";
 const replaceWith = "replaceddemo";
+const preview = true
 
 try {
     fs.readdir("data", (err, data) => {
@@ -8,9 +9,11 @@ try {
         for (let index = 0; index < data.length; index++) {
             const item = data[index];
             let newFile = "data/" + item.replaceAll(replaceThis, replaceWith)
-            fs.rename("data/" + item, newFile , ()=>{
-                console.log("Renamed Successfully");
-            })
+            if (!preview) {
+                fs.rename("data/" + item, newFile, () => {
+                    console.log("Renamed Successfully");
+                })
+            }
         }
     })
 } catch (err) {
