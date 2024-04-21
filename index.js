@@ -22,5 +22,6 @@ try {
         }
     })
 } catch (err) {
+    console.log("Error in the code");
     console.error(err);
 }
