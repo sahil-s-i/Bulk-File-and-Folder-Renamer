@@ -6,7 +6,7 @@ const folder = path.parse(__dirname);
 
 try {
     fs.readdir(folder, (err, data) => {
-        console.log(data);
+        // console.log(data);
         for (let index = 0; index < data.length; index++) {
             const item = data[index];
             let oldFile = path.join(folder, item);
