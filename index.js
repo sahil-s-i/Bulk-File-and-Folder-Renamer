@@ -2,7 +2,7 @@ const path = require('path');
 const replaceThis = "demo";
 const replaceWith = "replaceddemo";
 const preview = true;
-const folder = path.parse(__dirname)
+const folder = path.parse(__dirname);
 
 try {
     fs.readdir(folder, (err, data) => {
