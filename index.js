@@ -6,6 +6,7 @@ const folder = path.parse(__dirname);
 
 try {
     fs.readdir(folder, (err, data) => {
+        // This will print file in the data folder 
         // console.log(data);
         for (let index = 0; index < data.length; index++) {
             const item = data[index];
